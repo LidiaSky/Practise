@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+    function go() {
+      xmlhttp.open('GET','/fragment.php',false);
+      xmlhttp.send(null);
+      document.getElementByID('frag').innerHTML = xmlhttp.responseText;
+      return false;
+    }
+    </script>
+  </head>
+    <body>
+      <div id="frag"></div>
+
+      <form>
+        <input type="submit" value="Пуск"
+        onclick="return go();"/>
+      </form>
+    </body>
+</html>
